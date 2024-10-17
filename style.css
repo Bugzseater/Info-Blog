@@ -14,8 +14,7 @@ body {
     align-items: center;
     padding: 1rem 2rem;
     background-color: #2f2f2f;
-    position: fixed;
-    width: 100%;
+
 }
 
 .logo {
@@ -341,3 +340,137 @@ body {
     font-size: 0.9em;
 }
 
+/* Media Queries for Responsive Design */
+
+/* Media Queries for Responsive Design */
+
+/* Small devices (phones, 576px and down) */
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links, .country-links {
+        display: none; /* Hide nav items in mobile view */
+    }
+
+    .logo {
+        margin-bottom: 0; /* Remove bottom margin from logo */
+    }
+
+    .landing-container {
+        flex-direction: column;
+    }
+
+    .right-column {
+        margin-left: 0;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .trending-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo, .footer-links, .footer-social, .footer-newsletter {
+        width: 100%;
+        margin-bottom: 1rem; /* Decreased footer margin */
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-links li {
+        margin-left: 1rem;
+    }
+
+    .landing-container {
+        flex-direction: column;
+    }
+
+    .right-column {
+        margin-left: 0;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .trending-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        justify-content: space-around;
+    }
+
+    .footer-logo, .footer-links, .footer-social, .footer-newsletter {
+        margin-bottom: 1rem; /* Decreased footer margin */
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .landing-container {
+        padding: 0 2rem;
+    }
+
+    .right-column {
+        margin-left: 1rem;
+    }
+
+    .trending-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-logo, .footer-links, .footer-social, .footer-newsletter {
+        margin-bottom: 1rem; /* Decreased footer margin */
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 993px) {
+    .landing-container {
+        padding: 0;
+    }
+
+    .trending-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-logo, .footer-links, .footer-social, .footer-newsletter {
+        margin-bottom: 1rem; /* Decreased footer margin */
+    }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 320px) {
+    .right-column h1 {
+        font-size: 2rem;
+    }
+
+    .right-column p {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
